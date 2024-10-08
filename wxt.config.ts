@@ -14,5 +14,8 @@ export default defineConfig({
       sandbox:
         "sandbox allow-scripts; script-src 'self' 'unsafe-eval' https://api.github.com https://gitee.com; object-src 'self'",
     },
+    chrome_url_overrides: {
+      newtab: "options.html"
+    },
   },
 });
