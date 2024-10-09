@@ -15,7 +15,7 @@ export const StyledSidebarWrapper = styled.div<{
     position: fixed;
     top: 100px;
     transition: transform 0.2s ease-in-out;
-    border-right: 1px solid ${(props) => props.theme.colorBorder || 'rgba(5, 5, 5, 0.06)'};
+    border-right: ${(props) => props.$collapsed ? '0' : '1px'} solid ${(props) => props.theme.colorBorder || 'rgba(5, 5, 5, 0.06)'};
 
     &.collapsed {
       .sidebar-inner-content {
@@ -30,7 +30,7 @@ export const StyledSidebarWrapper = styled.div<{
       position: absolute;
       box-sizing: border-box;
       top: 0;
-      right: -36px;
+      right: -42px;
       display: flex;
       flex-direction: column;
       gap: 6px;
@@ -107,15 +107,15 @@ export const StyledListWrapper = styled.div<{
   transition: grid-template-columns 0.2s ease-in-out;
 
   .content {
-    padding-left: 40px;
+    padding-left: 10px;
     .tip {
-      padding: 0 16px;
+      padding: 0 36px;
       margin-bottom: 8px;
     }
     .count-info {
       display: flex;
       align-items: center;
-      padding: 0 16px;
+      padding: 0 36px;
       margin-bottom: 24px;
       .count-item {
         margin-right: 8px;

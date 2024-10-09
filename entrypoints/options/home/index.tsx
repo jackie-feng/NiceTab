@@ -90,7 +90,7 @@ export default function Home() {
           >
             <div className="sidebar-action-box">
               <ToggleSidebarBtn collapsed={sidebarCollapsed} onCollapseChange={onCollapseChange}></ToggleSidebarBtn>
-              {selectedTagKey ? <SortingBtns onSort={onSort}></SortingBtns> : null}
+              {/* {selectedTagKey ? <SortingBtns onSort={onSort}></SortingBtns> : null} */}
             </div>
 
             <div className="sidebar-inner-content">
