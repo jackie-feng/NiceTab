@@ -65,7 +65,7 @@ const StyledPageContainer = styled.div<{ theme: StyledThemeProps }>`
     align-items: center;
     height: 60px;
     // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    box-shadow: ${(props) => props.theme.boxShadow || '0 2px 12px 3px rgba(0, 0, 0, 0.1)'};
+    // box-shadow: ${(props) => props.theme.boxShadow || '0 2px 12px 3px rgba(0, 0, 0, 0.1)'};
     background: ${(props) => props.theme.colorBgContainer || '#fff'};
 
     .logo {
