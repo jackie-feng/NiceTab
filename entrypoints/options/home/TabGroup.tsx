@@ -252,12 +252,6 @@ function TabGroup({
             ></EditInput>
           </div>
           <div className="group-header-right-part">
-            <div className="group-info">
-              <span className="tab-count" style={{ color: ENUM_COLORS.volcano }}>
-                {$fmt({ id: 'home.tab.count', values: { count: tabList?.length || 0 } })}
-              </span>
-              <span className="group-create-time">{createTime}</span>
-            </div>
             <Space
               className="group-action-btns"
               size={0}
@@ -315,6 +309,12 @@ function TabGroup({
                 </span>
               )}
             </Space>
+            <div className="group-info">
+              <span className="tab-count" style={{ color: token.colorTextSecondary }}>
+                {$fmt({ id: 'home.tab.count', values: { count: tabList?.length || 0 } })}
+              </span>
+              <span className="group-create-time">{createTime}</span>
+            </div>
           </div>
         </StyledGroupHeader>
 
@@ -378,9 +378,11 @@ function TabGroup({
               value={selectedTabIds}
               onChange={setSelectedTabIds}
             >
-              {tabList.map((tab, index) => (
-                <TabListMarkup key={tab.tabId} tab={tab} index={index}></TabListMarkup>
-              ))}
+              <div className="tab-list-grid-group">
+                {tabList.map((tab, index) => (
+                  <TabListMarkup key={tab.tabId} tab={tab} index={index}></TabListMarkup>
+                ))}
+              </div>
             </Checkbox.Group>
           </StyledTabListWrapper>
         </DropComponent>

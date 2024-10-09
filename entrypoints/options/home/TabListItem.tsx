@@ -115,7 +115,7 @@ export default function TabListItem({ tab, group, onRemove, onChange }: TabItemP
           </Popover>
         )}
         {/* icon tab edit */}
-        <StyledActionIconBtn
+       {!group?.isLocked && (<StyledActionIconBtn
           className="tab-item-btn btn-edit"
           $size="16"
           title={$fmt('common.edit')}
@@ -123,7 +123,7 @@ export default function TabListItem({ tab, group, onRemove, onChange }: TabItemP
           onClick={() => setModalVisible(true)}
         >
           <EditOutlined />
-        </StyledActionIconBtn>
+        </StyledActionIconBtn>)}
         {/* icon tab remove */}
         {!group?.isLocked && (
           <StyledActionIconBtn

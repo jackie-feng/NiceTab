@@ -20,6 +20,10 @@ export const StyledGroupHeader = styled.div<{ theme: StyledThemeProps }>`
   }
   .group-header-right-part {
     flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     .group-info {
       display: flex;
       align-items: center;
@@ -55,7 +59,8 @@ export const StyledTabActions = styled.div<{ theme: StyledThemeProps }>`
   gap: 24px;
   height: 26px;
   margin: 8px 0;
-  padding: 0 20px;
+  margin-bottom: 0;
+  padding: 0 0px;
   font-size: 12px;
   .checkall-wrapper {
     display: flex;
@@ -80,10 +85,17 @@ export const StyledTabActions = styled.div<{ theme: StyledThemeProps }>`
 export const StyledTabListWrapper = styled.div`
   min-height: 24px;
   margin-top: 8px;
-  padding-left: 20px;
+  width: 100%;
+  padding-left: 0px;
   .tab-list-checkbox-group {
     width: 100%;
     display: block;
+  }
+  .tab-list-grid-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 3px;
+    grid-column-gap: 3px;
   }
   .show-rest-btn {
     display: flex;

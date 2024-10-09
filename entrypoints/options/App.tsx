@@ -85,18 +85,17 @@ const StyledPageContainer = styled.div<{ theme: StyledThemeProps }>`
   }
   .main-content {
     position: relative;
-    width: 1200px;
     padding: 100px 32px 40px;
     margin: 0 auto;
   }
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1799px) {
     .main-content {
       max-width: 100%;
     }
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1800px) {
     .main-content {
-      width: 1120px;
+      width: 1720px;
     }
   }
 `;
