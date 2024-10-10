@@ -95,7 +95,8 @@ const StyledPageContainer = styled.div<{ theme: StyledThemeProps }>`
   }
   @media screen and (min-width: 1800px) {
     .main-content {
-      width: 1720px;
+      max-width: 100%;
+      // width: 1720px;
     }
   }
 `;

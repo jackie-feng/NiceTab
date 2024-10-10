@@ -93,7 +93,7 @@ export const StyledTabListWrapper = styled.div`
   }
   .tab-list-grid-group {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, 300px);
     grid-row-gap: 3px;
     grid-column-gap: 3px;
   }
